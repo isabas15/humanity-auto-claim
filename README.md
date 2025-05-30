@@ -16,7 +16,7 @@ git clone https://github.com/isabas15/humanity-auto-claim.git && cd humanity-aut
 npm install
 ```
 # Configuration
-1. Add proxies to proxies.txt (one per line):
+1. Add proxy to proxy.txt (one per line):
 ```bash
 http://user:pass@ip:port
 http://ip:port
