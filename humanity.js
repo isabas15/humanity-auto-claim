@@ -18,12 +18,13 @@ function countdown(seconds) {
             remaining--;
             if (remaining < 0) {
                 clearInterval(interval);
-                process.stdout.write('\n');
+                process.stdout.write('\r' + ' '.repeat(40) + '\r');
                 resolve();
             }
         }, 1000);
     });
 }
+
 
 async function tryRequestWithProxies(url, token, proxies) {
     const headers = {
