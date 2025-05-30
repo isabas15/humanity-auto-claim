@@ -66,7 +66,7 @@ async function processToken(token, proxy, index) {
     token = token.trim();
     if (!token) return;
 
-    console.log(`\n--- Token #${index + 1} ---`);
+    console.log(`\n--- Account ${index + 1} ---`);
 
     try {
         const response = await tryRequestWithProxies(userInfoUrl, token, [proxy]);
