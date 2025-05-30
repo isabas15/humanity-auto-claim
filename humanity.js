@@ -5,9 +5,14 @@ const { HttpsProxyAgent } = require('https-proxy-agent');
 const userInfoUrl = 'https://testnet.humanity.org/api/user/userInfo';
 const claimRewardUrl = 'https://testnet.humanity.org/api/rewards/daily/claim';
 
-function delayRandom(minSeconds = 5, maxSeconds = 10) {
-    const ms = Math.floor(Math.random() * (maxSeconds - minSeconds + 1) + minSeconds) * 1000;
-    return new Promise(resolve => setTimeout(resolve, ms));
+// function delayRandom(minSeconds = 5, maxSeconds = 10) {
+//     const ms = Math.floor(Math.random() * (maxSeconds - minSeconds + 1) + minSeconds) * 1000;
+//     return new Promise(resolve => setTimeout(resolve, ms));
+// }
+
+async function delayRandom(minSeconds = 5, maxSeconds = 10) {
+    const seconds = Math.floor(Math.random() * (maxSeconds - minSeconds + 1)) + minSeconds;
+    await countdown(seconds); // tampilkan countdown dan delay
 }
 
 function countdown(seconds) {
@@ -24,6 +29,7 @@ function countdown(seconds) {
         }, 1000);
     });
 }
+
 
 
 async function tryRequestWithProxies(url, token, proxies) {
