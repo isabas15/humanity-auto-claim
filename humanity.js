@@ -36,8 +36,6 @@ async function tryRequestWithProxies(url, token, proxies) {
         const proxy = proxies[i];
         const agent = proxy ? new HttpsProxyAgent(proxy) : null;
 
-        console.log(`Using proxy  : ${proxy}`);
-
         try {
             const response = await axios.post(url, {}, {
                 headers,
@@ -75,6 +73,7 @@ async function processToken(token, proxy, index) {
         const { msg, data } = response.data;
         const { nickName, ethAddress, daily_reward } = data;
 
+        console.log(`Using proxy  : ${proxy}`);
         console.log('Message      :', msg);
         console.log('Nickname     :', nickName);
         console.log('ETH Address  :', ethAddress);
