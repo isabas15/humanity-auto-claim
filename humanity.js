@@ -82,12 +82,13 @@ async function processToken(token, allProxies, usedProxies, index) {
         // Dapatkan proxy yang berhasil untuk userInfo
         const { response: userInfoResp, proxy } = await tryRequestWithProxies(userInfoUrl, token, allProxies, usedProxies);
         const { msg, data } = userInfoResp.data;
-        const { nickName, ethAddress, daily_reward } = data;
+        const { nickName, ethAddress, totalRewards, daily_reward } = data;
 
         console.log(`Using proxy  : ${proxy}`);
         console.log('Message      :', msg);
         console.log('Nickname     :', nickName);
         console.log('ETH Address  :', ethAddress);
+        console.log('Total Reward :', totalRewards);
         console.log('Daily Reward :', daily_reward.available ? '✅ Available to claim' : '❌ Already claimed');
 
         if (daily_reward.available) {
