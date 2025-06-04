@@ -1,12 +1,13 @@
 # Humanity-Auto-Claim
-- Register testnet.humanity.org/login?ref=purnomosidi
+- Register Here: https://testnet.humanity.org/login?ref=purnomosidi
 - Completed social taks(link discord,email, etc)
 # Features ✨
 - Auto Claim Daily Reward
 # Prerequisites 📋
 - Node.js (v18 or higher)
-- npm or yarn
+- npm
 - git
+- proxy
 # Installation ⚙️
 1. Clone the repository:
 ```bash
