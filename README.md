@@ -1,11 +1,12 @@
 # Humanity-Auto-Claim
-An automated bot for claim daily reward
+- Register testnet.humanity.org/login?ref=purnomosidi
+- Completed social taks(link discord,email, etc)
 # Features ✨
 - Auto Claim Daily Reward
 # Prerequisites 📋
 - Node.js (v18 or higher)
 - npm or yarn
-- Proxies in proxies.txt file
+- git
 # Installation ⚙️
 1. Clone the repository:
 ```bash
@@ -19,9 +20,7 @@ npm install
 1. Add proxy to proxy.txt (one per line):
 ```bash
 http://user:pass@ip:port
-http://ip:port
 socks5://user:pass@ip:port
-socks5://ip:port
 ```
 2. Add Token to token.txt (one per line):
 ```bash
@@ -32,3 +31,5 @@ Run the bot:
 ```bash
 node humanity.js
 ```
+# Disclaimer
+This tool is for educational purposes only. Use it at your own risk.
